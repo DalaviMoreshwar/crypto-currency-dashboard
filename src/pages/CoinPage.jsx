@@ -96,30 +96,26 @@ const CoinPage = () => {
           ></Typography>
           <div className={classes.marketData}>
             <span style={{ display: "flex" }}>
-              <Typography variant="h5" className={classes.heading}>
-                Rank:
-              </Typography>
+              <Typography className={classes.heading}>Rank:</Typography>
               &nbsp;&nbsp;
-              <Typography variant="h5">{coin.market_cap_rank}</Typography>
+              <Typography>{coin.market_cap_rank}</Typography>
             </span>
 
             <span style={{ display: "flex" }}>
-              <Typography variant="h5" className={classes.heading}>
+              <Typography className={classes.heading}>
                 Current Price:
               </Typography>
               &nbsp;&nbsp;
-              <Typography variant="h5">
+              <Typography>
                 {symbol}{" "}
                 {coin.market_data.current_price[currency.toLowerCase()]}
               </Typography>
             </span>
 
             <span style={{ display: "flex" }}>
-              <Typography variant="h5" className={classes.heading}>
-                Market Cap:
-              </Typography>
+              <Typography className={classes.heading}>Market Cap:</Typography>
               &nbsp;&nbsp;
-              <Typography variant="h5">
+              <Typography>
                 {symbol}{" "}
                 {coin.market_data.market_cap[currency.toLowerCase()]
                   .toLocaleString()

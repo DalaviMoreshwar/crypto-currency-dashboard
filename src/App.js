@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import CoinPage from "./pages/CoinPage";
 import HomePage from "./pages/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoPage from "./pages/NoPage";
 
 const useStyles = makeStyles({
   root: {
@@ -21,6 +22,7 @@ function App() {
       <div className={classes.root}>
         <Header />
         <Routes>
+          <Route path="*" element={<NoPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/" element={<CoinPage />}>
             <Route path="/coin-details/:coin_id" element={<CoinPage />} />
